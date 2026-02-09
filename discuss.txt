@@ -1,0 +1,243 @@
+
+Open-Meteo	    Flexible variable requests	👍 Yes (no key)	    ⭐⭐
+OpenWeatherMap	Most general weather	    👍 Free key	        ⭐⭐⭐
+WeatherAPI.com	Very rich data	            👍 Free tier	    ⭐⭐⭐⭐
+Tomorrow.io	    Industry & data layers	    👍 Limited free	    ⭐⭐⭐⭐⁺
+API Ninjas	     Simple weather app	        👍 Free key	        ⭐
+weatherstack    Basic weather + history	    👍 Free tier	    ⭐⭐
+
+
+
+
+WEATHERSTACK
+{
+    "request": {
+        "type": "City",
+        "query": "San Francisco, United States of America",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "San Francisco",
+        "country": "United States of America",
+        "region": "California",
+        "lat": "37.775",
+        "lon": "-122.418",
+        "timezone_id": "America/Los_Angeles",
+        "localtime": "2019-09-03 05:35",
+        "localtime_epoch": 1567488900,
+        "utc_offset": "-7.0"
+    },
+    "current": {
+        "observation_time": "12:35 PM",
+        "temparature": 16,
+        "weather_code": 122,
+        "weather_icons": [
+            "https://assets.weatherstack.com/images/symbol.png"
+        ],
+        "weather_descriptions": [
+            "Overcast"
+        ],
+        "astro": {
+            "sunrise": "06:31 AM",
+            "sunset": "05:47 PM",
+            "moonrise": "06:56 AM",
+            "moonset": "06:47 PM",
+            "moon_phase": "Waxing Crescent",
+            "moon_illumination": 0
+        },
+        "air_quality": {
+            "co": "468.05",
+            "no2": "32.005",
+            "o3": "55",
+            "so2": "7.4",
+            "pm2_5": "6.66",
+            "pm10": "6.66",
+            "us-epa-index": "1",
+            "gb-defra-index": "1"
+        },
+        "wind_speed": 17,
+        "wind_degree": 260,
+        "wind_dir": "W",
+        "pressure": 1016,
+        "precip": 0,
+        "humidity": 87,
+        "cloudcover": 100,
+        "feelslike": 16,
+        "uv_index": 0,
+        "visibility": 16
+    }
+}
+Reliable Data Sources
+Powered by a strong backbone of data sources, our weather data API comes with the highest level of reliability, consistency and accuracy.
+
+
+API NINJAS
+{10 items
+"wind_speed":5.66
+"wind_degrees":210
+"temp":7
+"humidity":87
+"sunset":1615658463
+"min_temp":7
+"cloud_pct":75
+"feels_like":2
+"sunrise":1615616341
+"max_temp":8
+}
+[2 items
+0:{10 items
+"timestamp":1740247200
+"temp":13
+"feels_like":12
+"humidity":70
+"min_temp":10
+"max_temp":13
+"weather":"Clouds"
+"cloud_pct":40
+"wind_speed":2.36
+"wind_degrees":231
+}
+1:"..."
+]
+
+WeatherAPI
+{
+    "bulk": [
+        {
+            "query": {
+                "custom_id": "my-id-1",
+                "q": "53,-0.12",
+                "location": {
+                    "name": "Boston",
+                    "region": "Lincolnshire",
+                    "country": "United Kingdom",
+                    "lat": 53.0,
+                    "lon": -0.12,
+                    "tz_id": "Europe/London",
+                    "localtime_epoch": 1673620218,
+                    "localtime": "2023-01-13 14:30"
+                },
+                "current": {
+                    "last_updated_epoch": 1673620200,
+                    "last_updated": "2023-01-13 14:30",
+                    "temp_c": 8.7,
+                    "temp_f": 47.7,
+                    "is_day": 1,
+                    "condition": {
+                        "text": "Partly cloudy",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                        "code": 1003
+                    },
+                    "wind_mph": 24.2,
+                    "wind_kph": 38.9,
+                    "wind_degree": 260,
+                    "wind_dir": "W",
+                    "pressure_mb": 1005.0,
+                    "pressure_in": 29.68,
+                    "precip_mm": 0.0,
+                    "precip_in": 0.0,
+                    "humidity": 74,
+                    "cloud": 75,
+                    "feelslike_c": 4.4,
+                    "feelslike_f": 39.9,
+                    "vis_km": 10.0,
+                    "vis_miles": 6.0,
+                    "uv": 2.0,
+                    "gust_mph": 33.1,
+                    "gust_kph": 53.3
+                }
+            }
+        },
+        {
+            "query": {
+                "custom_id": "any-internal-id",
+                "q": "London",
+                "location": {
+                    "name": "London",
+                    "region": "City of London, Greater London",
+                    "country": "United Kingdom",
+                    "lat": 51.52,
+                    "lon": -0.11,
+                    "tz_id": "Europe/London",
+                    "localtime_epoch": 1673620218,
+                    "localtime": "2023-01-13 14:30"
+                },
+                "current": {
+                    "last_updated_epoch": 1673620200,
+                    "last_updated": "2023-01-13 14:30",
+                    "temp_c": 11.0,
+                    "temp_f": 51.8,
+                    "is_day": 1,
+                    "condition": {
+                        "text": "Partly cloudy",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                        "code": 1003
+                    },
+                    "wind_mph": 23.0,
+                    "wind_kph": 37.1,
+                    "wind_degree": 270,
+                    "wind_dir": "W",
+                    "pressure_mb": 1010.0,
+                    "pressure_in": 29.83,
+                    "precip_mm": 0.0,
+                    "precip_in": 0.0,
+                    "humidity": 58,
+                    "cloud": 75,
+                    "feelslike_c": 8.1,
+                    "feelslike_f": 46.5,
+                    "vis_km": 10.0,
+                    "vis_miles": 6.0,
+                    "uv": 2.0,
+                    "gust_mph": 22.4,
+                    "gust_kph": 36.0
+                }
+            }
+        },
+        {
+            "query": {
+                "custom_id": "us-zipcode-id-765",
+                "q": "90201",
+                "location": {
+                    "name": "Bell",
+                    "region": "California",
+                    "country": "USA",
+                    "lat": 33.97,
+                    "lon": -118.17,
+                    "tz_id": "America/Los_Angeles",
+                    "localtime_epoch": 1673620220,
+                    "localtime": "2023-01-13 6:30"
+                },
+                "current": {
+                    "last_updated_epoch": 1673620200,
+                    "last_updated": "2023-01-13 06:30",
+                    "temp_c": 10.0,
+                    "temp_f": 50.0,
+                    "is_day": 0,
+                    "condition": {
+                        "text": "Clear",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+                        "code": 1000
+                    },
+                    "wind_mph": 2.2,
+                    "wind_kph": 3.6,
+                    "wind_degree": 10,
+                    "wind_dir": "N",
+                    "pressure_mb": 1020.0,
+                    "pressure_in": 30.13,
+                    "precip_mm": 0.0,
+                    "precip_in": 0.0,
+                    "humidity": 74,
+                    "cloud": 0,
+                    "feelslike_c": 10.3,
+                    "feelslike_f": 50.5,
+                    "vis_km": 16.0,
+                    "vis_miles": 9.0,
+                    "uv": 1.0,
+                    "gust_mph": 3.6,
+                    "gust_kph": 5.8
+                }
+            }
+        }
+    ]
+}

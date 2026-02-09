@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmosphere | Open-Meteo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <main class="container">
+        <div class="weather-dashboard">
+            <header>
+                <h1>Atmosphere</h1>
+                <p>Open-Meteo Weather Intelligence</p>
+            </header>
+
+            <div class="search-section">
+                <div class="input-group">
+                    <span class="icon"><ion-icon name="map-outline"></ion-icon></span>
+                    <input type="number" id="lat" placeholder="Latitude" step="any" value="52.52">
+                </div>
+                <div class="input-group">
+                    <span class="icon"><ion-icon name="map-outline"></ion-icon></span>
+                    <input type="number" id="lon" placeholder="Longitude" step="any" value="13.41">
+                </div>
+                <button id="get-weather-btn">
+                    Fetch Data <ion-icon name="cloud-download-outline"></ion-icon>
+                </button>
+            </div>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="error-message" class="hidden"></div>
+
+            <div id="weather-result" class="hidden">
+                <!-- Location Header -->
+                <div class="section location-card">
+                    <div class="loc-main">
+                        <h2><ion-icon name="location-sharp"></ion-icon> Coordinates</h2>
+                        <p class="subtitle"><span id="meta-lat">--</span>°N, <span id="meta-lon">--</span>°E</p>
+                    </div>
+                    <div class="loc-meta">
+                        <div class="chip"><ion-icon name="stats-chart-outline"></ion-icon> Elevation: <span
+                                id="meta-elev">--</span>m</div>
+                        <div class="chip"><ion-icon name="time-outline"></ion-icon> UTC Offset: <span
+                                id="meta-offset">--</span>s</div>
+                    </div>
+                </div>
+
+                <!-- Current Weather -->
+                <div class="section main-temp-card">
+                    <div class="temp-display">
+                        <div class="temp-values">
+                            <span id="curr-temp" class="big-temp">--</span><span class="unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="condition-display">
+                        <p>Time: <span id="curr-time">--</span></p>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <!-- Wind -->
+                    <div class="card">
+                        <h3><ion-icon name="speedometer-outline"></ion-icon> Wind</h3>
+                        <div class="data-row">
+                            <span>Speed</span>
+                            <strong><span id="curr-wind-speed">--</span> m/s</strong>
+                        </div>
+                        <div class="data-row">
+                            <span>Direction</span>
+                            <strong><span id="curr-wind-dir">--</span>°</strong>
+                        </div>
+                    </div>
+
+                    <!-- Atmosphere -->
+                    <div class="card">
+                        <h3><ion-icon name="water-outline"></ion-icon> Atmosphere</h3>
+                        <div class="data-row">
+                            <span>Humidity</span>
+                            <strong><span id="curr-humidity">--</span>%</strong>
+                        </div>
+                        <div class="data-row">
+                            <span>Precipitation</span>
+                            <strong><span id="curr-precip">--</span></strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hourly Data -->
+                <div class="section hourly-card">
+                    <h3>Hourly Direct Radiation (Next 24 Hours)</h3>
+                    <div class="table-container">
+                        <table id="hourly-table">
+                            <thead>
+                                <tr>
+                                    <th>Date/Time</th>
+                                    <th>Direct Radiation Instant</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Rows to be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
